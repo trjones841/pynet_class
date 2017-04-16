@@ -13,8 +13,8 @@ line_chart.render_to_file('/tmp/line.svg')
 """
 import pygal
 
-config = pygal.Config()
-config.style = pygal.style.DarkStyle
+config = pygal.Config(include_x_axis=True, legend_at_bottom=True, legend_at_bottom_columns=4, x_title='X Axis', y_title='Y Axis')
+config.style = pygal.style.LightStyle
 config.defs.append('''
   <linearGradient id="gradient-0" x1="0" x2="0" y1="0" y2="1">
     <stop offset="0%" stop-color="#ff5995" />
@@ -39,10 +39,10 @@ config.css.append('''inline:
   }''')
 
 line_chart = pygal.Line(config)
-line_chart.title = "SNMPv3 - MIB OID"
+line_chart.title = "SNMPv3 - MIB :  OID"
 line_chart.x_labels = map(str, range(0, 10))
 line_chart.add('Description', [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 line_chart.add('Description', [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 line_chart.add('Description', [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
 line_chart.add('Description', [ 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
-line_chart.render_to_file('/tmp/line.svg')
+line_chart.render_to_file('/tmp/pygal_line.svg')
