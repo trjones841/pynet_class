@@ -120,8 +120,9 @@ def __getsysUpTime():
     else:
         for varBind in varBinds:
             number = timeticks_2_time(int(varBind[1]))
-            print "\nsysUpTime (OID: %s): %2d days, %2d:%02d.%d" % (varBind[0], number.__getitem__(0), number.__getitem__(1),
-                                                          number.__getitem__(2), number.__getitem__(3))
+            print "\nsysUpTime (OID: %s): %2d days, %2d:%02d.%d" % (varBind[0], number.__getitem__(0),
+                                                                    number.__getitem__(1), number.__getitem__(2),
+                                                                    number.__getitem__(3))
 
 
 if __name__ == "__main__":
