@@ -77,3 +77,52 @@ community galileo {
 
 '''
 
+
+from pysnmp.hlapi import *
+
+
+def timeticks_2_time(timeticks):
+    # Convert TimeTicks to days, hours:minutes.seconds
+    d, h = divmod(timeticks, 8640000)
+    h, m = divmod(h, 360000)
+    m, s = divmod(m, 6000)
+    s = s / 100
+
+    #print "\n%d days, %02d:%02d.%02d" % (d, h, m, s)
+    time_list = [d, h, m, s]
+    return time_list
+
+    '''
+    # Alternative Method
+    import datetime
+    s = uptime/100
+    print datetime.timedelta(seconds=s)
+    '''
+
+
+def __getsysUpTime():
+
+    errorIndication, errorStatus, errorIndex, varBinds = next(
+        getCmd(SnmpEngine(),
+               UsmUserData('authpriv', 'authentication1234', 'privacy1234',
+                           authProtocol=usmHMACMD5AuthProtocol,
+                           privProtocol=usmAesCfb128Protocol),
+               UdpTransportTarget(('192.168.0.121', 161)),
+               ContextData(),
+               ObjectType(ObjectIdentity('SNMPv2-MIB', 'sysUpTime', 0)))
+    )
+    print varBinds
+    if errorIndication:
+        print(errorIndication)
+    elif errorStatus:
+        print('%s at %s' % (errorStatus.prettyPrint(),
+                            errorIndex and varBinds[int(errorIndex) - 1][0] or '?'))
+    else:
+        for varBind in varBinds:
+            number = timeticks_2_time(int(varBind[1]))
+            print "\nsysUpTime (OID: %s): %2d days, %2d:%02d.%d" % (varBind[0], number.__getitem__(0), number.__getitem__(1),
+                                                          number.__getitem__(2), number.__getitem__(3))
+
+
+if __name__ == "__main__":
+    __getsysUpTime()
