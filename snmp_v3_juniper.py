@@ -1,25 +1,17 @@
 #!/usr/bin/python2.7
 
-"""
-tjones@SRX220-Py# show snmp 
+'''
+tjones@SRX220-Py# show snmp    
 v3 {
     usm {
         local-engine {
-            user noauth {
-                authentication-none;
-            }
-            user authnopriv {
+            user SNMP_USER {
+                /* Password is: authenticate1234 */
                 authentication-md5 {
-                    authentication-key "$9$VEs2aiHmf5F-VQF69puX7N-24DjqTFnwYJDHqf5SrlvxNVwYZDilKWxN-2gTzF6tu1IceK836tO1RSywY24aUq.5T36s2JDHqQzSrlMxNgoJUDkg4n/9A1IYg4Zikz36/ApTQevLxdVTzF6p0hSrMWxyrZUiH5TEcSe8Xdbs2aZsYTzn6AtuO1Rre"; ## SECRET-DATA
-                }
-                privacy-none;
-            }
-            user authpriv {
-                authentication-md5 {
-                    authentication-key "$9$xr3-VYZGikqfLxmfQF/9vW8LVwaJD.fTNd2aGDkqIEhyM8xNdgaZhSlM8LVb.PfQ69pu1cSe5Q6Ap0IRNdVwYoDjq.5Q-V2aGDmPIEhrM8bs2oaUbwTzFnpudbwgZUP5Qzn/.mcyKMXx.PfQ/CBIErlMREgoZGq.O1IcevX7-VYg-d.PTQn69Ap0Ec"; ## SECRET-DATA
+                    authentication-key "$9$g2aJDiHmTQnq.5Fn6u07-dbs4HqmzF/TQSrKv7NqmP5369Ap0IEu0hrKMXxk.mf36AtOBEcikPQznCAuO1Ryl8LNsYo7NfTQ39CKMWLX-Y2aDjqg4Fn/CB17-dVwgGUHf5FmPF/AtOB7-dVgoJGDiqm4o69tpB1Vws2gJ.P5n6Af5hSreXxVwY4Uj"; ## SECRET-DATA
                 }
                 privacy-aes128 {
-                    privacy-key "$9$/N40CtOhSrlvWB1yKMWx7.Pf569uO1EhrqmuO1IrloJZDjqmfT9tuPfcyKvLXqmPfFn9ApBRhtp0IEhrl8X7NdsYgoGjHY2TzF6AtvW8Lxdg4ZGjH4oDk.mTQevM8-Vg4ZGjHlKGDkqf5RhcrlMVwY2oJsYJDHqf5SrlKvL-VwoaUbwYoaJDjApu1Sr"; ## SECRET-DATA
+                    privacy-key "$9$A9JBp0IylKv8XREeWLX-dfTQzCtBIESyKP5BIEhKvZUDHkP5QFt0BTQreW87NP5TQ69tuORcy0O1hSyKvxNdVwg4aZjk.4oFn6Cu08Xx7-waJDjk.JZHmf5F3M8LxbsaJDjk.vWjHmPQzcyrKvLs24oZUg4UH.PQzlKvW87bs2ZGiY24ZGUHkuOBElK"; ## SECRET-DATA
                 }
             }
         }
@@ -30,80 +22,61 @@ v3 {
                 security-name SNMP_SECURITY_NAME {
                     group SNMP_GROUP_NAME;
                 }
-                security-name noauth {
-                    group v3test;
-                }
-                security-name authnopriv {
-                    group v3test;
-                }
-                security-name authpriv {
-                    group v3test;
-                }
             }
         }
         access {
-            group v3test {
-                default-context-prefix {
-                    security-model any {
-                        security-level none {
-                            read-view v3testview;
-                            write-view v3testview;
-                            notify-view v3testview;
-                        }
+            group SNMP_GROUP_NAME {
+                context-prefix CONTEXT-PREFIX {
+                    security-model usm {
                         security-level authentication {
-                            read-view v3testview;
-                            write-view v3testview;
-                            notify-view v3testview;
-                        }
-                        security-level privacy {
-                            read-view v3testview;
-                            write-view v3testview;
-                            notify-view v3testview;
+                            read-view SNMP_READ_VIEW;
+                            write-view SNMP_WRITE_VIEW;
+                            notify-view SNMP_NOTIFY_VIEW;
                         }
                     }
                 }
             }
         }
     }
-    target-address UBUNTU_DESKTOP01 {
+    target-address UBUNTU_DESKTOP01 {   
         address 192.168.0.182;
         timeout 600;
         target-parameters TARGET_PARATMETERS;
     }
     target-parameters TARGET_PARAMETERS {
         parameters {
-            message-processing-model v2c;
+            message-processing-model v3;
             security-model usm;
             security-level authentication;
-            security-name authnopriv;
+            security-name SECURITY_NAME;
         }
         notify-filter NOTIFY_FILTER;
     }
-    notify-filter NOTIFY_FILTER {
-        oid .1 include;
+    notify SNMP_NOTIFY {
+        tag SNMP_NOTIFY_TAG;
     }
-    snmp-community v3test {
-        security-name v3test;
+    notify-filter NOTIFY_FILTER {
+        oid 1 include;
+    }
+    snmp-community COMMUNITY_INDEX {
+        security-name SECURITY_NAME;
     }
 }
-view v3testview {
-    oid system include;
+view SNMP_NOTIFY_VIEW {
     oid .1 include;
+}
+view SNMP_READ_VIEW {
+    oid 1.3.6.1.4;
+}
+view SNMP_WRITE_VIEW {
+    oid 1.3.6.1.4.1;
 }
 community galileo {
     authorization read-write;
 }
 
+'''
 
-Reference - http://pysnmp.sourceforge.net/_downloads/usm-md5-des.py
-
-$snmpget -v3 -l authPriv -u authpriv -A authentication1234 -X privacy1234 -a MD5 -x AES 192.168.0.121 SNMPv2-MIB::sysDescr.0
-
-SNMPv2-MIB::sysDescr.0 = STRING: Juniper Networks, Inc. srx220h internet router, kernel JUNOS 12.1X45-D15.5 #0: 2013-09-19 07:42:15 UTC     
-builder@svl-junos-pool92.juniper.net:/volume/build/junos/12.1/service/12.1X45-D15.5/obj-octeon/junos/bsd/kernels/JSRXNLE/kernel Build date: 2013-09
-
-
-"""
 
 from pysnmp.hlapi import *
 
@@ -147,8 +120,9 @@ def __getsysUpTime():
     else:
         for varBind in varBinds:
             number = timeticks_2_time(int(varBind[1]))
-            print "\nsysUpTime (OID: %s): %2d days, %2d:%02d.%d" % (varBind[0], number.__getitem__(0), number.__getitem__(1),
-                                                          number.__getitem__(2), number.__getitem__(3))
+            print "\nsysUpTime (OID: %s): %2d days, %2d:%02d.%d" % (varBind[0], number.__getitem__(0),
+                                                                    number.__getitem__(1), number.__getitem__(2),
+                                                                    number.__getitem__(3))
 
 
 if __name__ == "__main__":
