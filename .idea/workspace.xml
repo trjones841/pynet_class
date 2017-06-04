@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="eea32db7-6e90-4ef0-9444-95dd4a900b3a" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Exercises/Week1/Answer 1-5.txt" afterPath="$PROJECT_DIR$/Exercises/Week1/Answer 1-5.txt" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -110,6 +109,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="trjones841 &lt;terry.jones@war-eagle.me&gt;" />
         <option value="terry.jones@war-eagle.me" />
         <option value="trjones841" />
         <option value="tjones" />
@@ -510,7 +510,14 @@
       <option name="project" value="LOCAL" />
       <updated>1492992741827</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="added week 4 of python class">
+      <created>1496598738073</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1496598738073</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
