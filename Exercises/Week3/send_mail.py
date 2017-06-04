@@ -23,4 +23,3 @@ def send_mail(recipient, subject, message, sender):
     smtp_conn.quit()
 
     return True
-
