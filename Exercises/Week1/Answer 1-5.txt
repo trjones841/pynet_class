@@ -81,3 +81,6 @@ Execises Week 1
     tjones@SRVR02:~/PycharmProjects/pynet_class$ git branch
       master
     * test
+
+
+To push branch to remote end (https://github.com/)
