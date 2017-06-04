@@ -1,7 +1,8 @@
 #!/usr/bin/python2.7
 
 '''
-Read in lists from Ex6 and ensure pretty print the struct
+Week1
+Ex7 - Read in lists from Ex6 and ensure pretty print the struct
 '''
 
 
