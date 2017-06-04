@@ -1,9 +1,0 @@
-Execises Week 1
-
-1. https://github/trjones841/
-
-2. pynet_class
-
-3. git clone https://github.com/trjones841/pynet_class.git
-
-4. 
