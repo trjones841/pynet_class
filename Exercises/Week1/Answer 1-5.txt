@@ -6,4 +6,78 @@ Execises Week 1
 
 3. git clone https://github.com/trjones841/pynet_class.git
 
-4. 
+4. Created answers file and added to pynet_class
+
+	tjones@SRVR02:~/PycharmProjects/pynet_class$ git status
+	On branch master
+	Your branch is up-to-date with 'origin/master'.
+	Changes to be committed:
+	  (use "git reset HEAD <file>..." to unstage)
+
+		modified:   .idea/workspace.xml
+		new file:   Exercises/Week1/Answer 1-5.txt
+
+	tjones@SRVR02:~/PycharmProjects/pynet_class$ git commit -a 'adding answers to week 1'
+	[master 01f365c] Updating week 1 answers.
+	 2 files changed, 65 insertions(+), 227 deletions(-)mit 'adding answers to week 1'
+	 create mode 100644 Exercises/Week1/Answer 1-5.txt match any file(s) known to git.
+
+	tjones@SRVR02:~/PycharmProjects/pynet_class$ git status
+	On branch masterp-to-date with 'origin/master'.
+	Your branch is ahead of 'origin/master' by 1 commit.
+	  (use "git push" to publish your local commits)
+	nothing to commit, working directory clean
+
+	tjones@SRVR02:~/PycharmProjects/pynet_class$ git push
+	warning: push.default is unset; its implicit value has changed in
+	Git 2.0 from 'matching' to 'simple'. To squelch this message
+	and maintain the traditional behavior, use:
+
+	  git config --global push.default matching
+
+	To squelch this message and adopt the new behavior now, use:
+
+	  git config --global push.default simple
+
+	When push.default is set to 'matching', git will push local branches
+	to the remote branches that already exist with the same name.
+
+	Since Git 2.0, Git defaults to the more conservative 'simple'
+	behavior, which only pushes the current branch to the corresponding
+	remote branch that 'git pull' uses to update the current branch.
+
+	See 'git help config' and search for 'push.default' for further information.
+	(the 'simple' mode was introduced in Git 1.7.11. Use the similar mode
+	'current' instead of 'simple' if you sometimes use older versions of Git)
+
+	Username for 'https://github.com': trjones841
+	Password for 'https://trjones841@github.com':
+	Counting objects: 7, done.
+	Delta compression using up to 4 threads.
+	Compressing objects: 100% (7/7), done.
+	Writing objects: 100% (7/7), 1.13 KiB | 0 bytes/s, done.
+	Total 7 (delta 4), reused 0 (delta 0)
+	remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+	To https://github.com/trjones841/pynet_class.git
+	   a66a0b9..01f365c  master -> master
+	tjones@SRVR02:~/PycharmProjects/pynet_class$
+
+5. Created test branch
+
+    tjones@SRVR02:~/PycharmProjects/pynet_class$ git branch
+    * master
+
+    tjones@SRVR02:~/PycharmProjects/pynet_class$ git branch test
+
+    tjones@SRVR02:~/PycharmProjects/pynet_class$ git branch
+    * master
+      test
+
+    tjones@SRVR02:~/PycharmProjects/pynet_class$ git checkout test
+    M       .idea/workspace.xml
+    M       Exercises/Week1/Answer 1-5.txt
+    Switched to branch 'test'
+
+    tjones@SRVR02:~/PycharmProjects/pynet_class$ git branch
+      master
+    * test
