@@ -12,11 +12,65 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="Ex6.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Exercises/Week1/Ex6.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="112">
               <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+=======
+      <file leaf-file-name="Paramikio_Basic.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Pynet_Class2/Paramikio_Basic.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="252">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding>
+                <element signature="e#1#16#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Answer 1-5.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Exercises/Week1/Answer 1-5.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-178">
+              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="junos_automation.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Pynet_Class2/junos_automation.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="966">
+              <caret line="74" column="14" lean-forward="false" selection-start-line="74" selection-start-column="14" selection-end-line="74" selection-end-column="14" />
+              <folding>
+                <marker date="1492990071796" expanded="true" signature="21:25" ph="&quot;&quot;&quot;...&quot;&quot;&quot;" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pexpect_example.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Pynet_Class2/pexpect_example.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="532">
+              <caret line="38" column="30" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
+              <folding>
+                <element signature="e#22#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="netmiko_ex.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../Pynet_Class2/netmiko_ex.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="5" selection-end-column="19" />
+>>>>>>> master
               <folding />
             </state>
           </provider>
@@ -61,6 +115,7 @@
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
+        <option value="trjones841 &lt;terry.jones@war-eagle.me&gt;" />
         <option value="terry.jones@war-eagle.me" />
         <option value="trjones841" />
         <option value="tjones" />
@@ -103,7 +158,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch_3.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
         <option value="$PROJECT_DIR$/Arista_vEOS_eAPI.py" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/Exercises/Week1/Ex6.py" />
+=======
+>>>>>>> master
         <option value="$PROJECT_DIR$/Exercises/Week1/Answer 1-5.txt" />
       </list>
     </option>
@@ -279,24 +337,6 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <configuration default="false" name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="Pynet_Class" />
-      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <method />
-    </configuration>
     <configuration default="false" name="scratch_3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -379,20 +419,37 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
+    <configuration default="false" name="scratch" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="Pynet_Class" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.netmiko_ex" />
-      <item index="1" class="java.lang.String" itemvalue="Python.KVM_OVS_Interface_Mapping" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Thunder_Import_SSL_Cert_Key" />
-      <item index="3" class="java.lang.String" itemvalue="Python.scratch" />
+      <item index="0" class="java.lang.String" itemvalue="Python.scratch" />
+      <item index="1" class="java.lang.String" itemvalue="Python.netmiko_ex" />
+      <item index="2" class="java.lang.String" itemvalue="Python.KVM_OVS_Interface_Mapping" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Thunder_Import_SSL_Cert_Key" />
       <item index="4" class="java.lang.String" itemvalue="Python.scratch_3" />
     </list>
     <recent_temporary>
-      <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.scratch" />
-        <item index="1" class="java.lang.String" itemvalue="Python.scratch_3" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Thunder_Import_SSL_Cert_Key" />
-        <item index="3" class="java.lang.String" itemvalue="Python.KVM_OVS_Interface_Mapping" />
-        <item index="4" class="java.lang.String" itemvalue="Python.netmiko_ex" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="Python.scratch_3" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Thunder_Import_SSL_Cert_Key" />
+        <item index="2" class="java.lang.String" itemvalue="Python.KVM_OVS_Interface_Mapping" />
+        <item index="3" class="java.lang.String" itemvalue="Python.netmiko_ex" />
       </list>
     </recent_temporary>
   </component>
@@ -464,11 +521,19 @@
       <updated>1492992741827</updated>
     </task>
     <task id="LOCAL-00009" summary="added week 4 of python class">
+<<<<<<< HEAD
       <created>1496601538356</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
       <updated>1496601538356</updated>
+=======
+      <created>1496598738073</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1496598738073</updated>
+>>>>>>> master
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
@@ -491,7 +556,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.53887117" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295583" sideWeight="0.48083067" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.47018105" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32954547" sideWeight="0.47018105" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997735" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -558,6 +623,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/test_snmp.py" />
+>>>>>>> master
     <entry file="file://$PROJECT_DIR$/simple_snmp.py" />
     <entry file="file://$PROJECT_DIR$/../Pynet_Class2/SNMPv3 Class Notes">
       <provider selected="true" editor-type-id="text-editor">
@@ -767,6 +836,7 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/../Pynet_Class2/netmiko_ex.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="42">
@@ -780,13 +850,28 @@
         <state relative-caret-position="112">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/Arista_vEOS_eAPI.py" />
+    <entry file="file://$PROJECT_DIR$/../Pynet_Class2/Paramikio_Basic.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding>
+            <element signature="e#1#16#0" expanded="true" />
+          </folding>
+>>>>>>> master
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Exercises/Week1/Answer 1-5.txt">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="172">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+=======
+        <state relative-caret-position="-178">
+          <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+>>>>>>> master
           <folding />
         </state>
       </provider>
