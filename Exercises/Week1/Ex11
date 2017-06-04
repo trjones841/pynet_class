@@ -1,0 +1,16 @@
+11. Push Ex 6-10 to Github
+
+
+    git push done using PyCharm
+
+    tjones@SRVR02:~/PycharmProjects/pynet_class$ git push
+    Username for 'https://github.com': trjones841
+    Password for 'https://trjones841@github.com':
+    Counting objects: 5, done.
+    Delta compression using up to 4 threads.
+    Compressing objects: 100% (5/5), done.
+    Writing objects: 100% (5/5), 587 bytes | 0 bytes/s, done.
+    Total 5 (delta 3), reused 0 (delta 0)
+    remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+    To https://github.com/trjones841/pynet_class.git
+       f7a931c..782f03a  master -> master
