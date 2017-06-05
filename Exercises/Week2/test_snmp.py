@@ -4,7 +4,7 @@ import pysnmp
 
 def snmpwalk1():
 
-    print "pysnmp.verision: ", pysnmp.version
+    print "pysnmp.__version__: ", pysnmp.__version__
     print "pysnmp.__name__: ", pysnmp.__name__
     return
 

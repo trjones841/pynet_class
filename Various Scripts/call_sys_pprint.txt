@@ -1,0 +1,55 @@
+import sys
+
+from pprint import pprint
+pprint(sys.path)
+
+export PYTHONPATH='\path\to\file'
+unset PYTHONPATH
+
+
+
+
+Start Seyren:
+
+sudo java -jar seyren-1.5.0.jar -httpPort=8081
+
+Env Variables:
+
+export GRAPHITE_USERNAME='graphite'
+export GRAPHITE_PASSWORD='A_aa0404'
+export GRAPHITE_CONNECT_TIMEOUT=10000
+export SEYREN_URL=http://localhost:8081/seyren
+export GRAPHITE_CARBON_PICKLE_ENABLE=true
+export SEYREN_LOG_PATH='/var/log/seyren/'
+export SEYREN_LOG_FILE_LEVEL='warn'
+export GRAPHITE_REFRESH=2000
+
+
+echo $GRAPHITE_USERNAME
+echo $GRAPHITE_PASSWORD
+echo $GRAPHITE_CONNECT_TIMEOUT
+echo $SEYREN_URL
+echo $GRAPHITE_CARBON_PICKLE_ENABLE
+echo $SEYREN_LOG_PATH
+echo $SEYREN_LOG_FILE_LEVEL
+echo $GRAPHITE_REFRESH
+echo $
+echo $
+echo $
+
+
+Target: summarize(nonNegativeDerivative(stats.transactions.count),"1h","sum",true)
+From: -1h
+To: [blank]
+Warn: 50 (soft minimum)
+Error: 25 (hard minimum)
+
+fastnetmon.hosts.10_244_1_1.incoming.average.bps
+fastnetmon.hosts.10_244_1_1.incoming.average.flows
+fastnetmon.hosts.10_244_1_1.incoming.average.pps
+fastnetmon.networks.10_244_1_0_24.incoming.bps
+fastnetmon.networks.10_244_1_0_24.incoming.flows
+fastnetmon.networks.10_244_1_0_24.incoming.pps
+fastnetmon.total.incoming.bps
+fastnetmon.total.incoming.flows
+fastnetmon.total.incoming.pps

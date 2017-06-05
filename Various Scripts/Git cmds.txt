@@ -1,0 +1,30 @@
+
+
+git clone https://github.com/trjones841/pynet_class
+
+git clone git@github.com:trjones841/pynet_testx.git
+
+
+
+
+
+git branch
+
+git commit -m "Add comment here"
+
+git log
+
+git remote
+
+git remote -v
+
+git push origin master
+
+git pull origin master
+
+get status
+
+git branch dev
+
+git checkout dev
+

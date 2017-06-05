@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>CGI examples</h2>
+<h5></h5>
+<h4>"Checkbox Example"</h4>
+<form action="/cgi-bin/checkbox.cgi" method="POST" target="_blank">
+<input type="checkbox" name="maths" value="on" /> Maths
+<input type="checkbox" name="physics" value="on" /> Physics
+<input type="submit" value="Select Subject" />
+</form>
+<h5></h5>
+<h4>"Radio Button Example"</h4>
+<form action="/cgi-bin/radiobutton.py" method="post" target="_blank">
+<input type="radio" name="subject" value="maths" /> Maths
+<input type="radio" name="subject" value="physics" /> Physics
+<input type="submit" value="Select Subject" />
+</form>
+<h5></h5>
+<h4>"Text Area Example"</h4>
+<form action="/cgi-bin/textarea.cgi" method="post" target="_blank">
+<textarea name="textcontent" cols="40" rows="4">
+Type your text here...
+</textarea>
+<input type="submit" value="Submit" />
+</form>
+<h5></h5>
+<h4>"Dropdown Example"</h4>
+<form action="/cgi-bin/dropdown.py" method="post" target="_blank">
+<select name="dropdown">
+<option value="Maths" selected>Maths</option>
+<option value="Physics">Physics</option>
+</select>
+<input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
+

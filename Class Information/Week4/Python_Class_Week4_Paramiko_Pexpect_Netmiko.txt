@@ -1,0 +1,97 @@
+Python Class Notes - Week 4
+
+
+##Paramiko#######################################################################################################
+import paramiko
+from getpass import getpass
+
+IPADDR = '192.168.0.121'
+USER = 'tjones'
+PASSWD = getpass()
+PORT = 22
+
+remote_conn_pre=paramiko.SSHCLient()
+
+remote_conn_pre
+
+#remote_conn_pre.missiing_host_key_policy(paramiko.AutoAddPolicy())
+#remote_conn_pre.load_system_host_keys("/home/tjones/.ssh/known_hosts")
+remote_conn_pre.load_system_host_keys()
+
+remote_conn_pre.connect(IPADDR, username=USER, password=PASSWD, look_for_keys=False, allow_agent=False, port=PORT)
+
+remote_conn = remote_comm_pre.invoke_shell()
+
+# recv(bytes) - max == 65535
+outp = remote_conn.recv(5000)
+print outp
+
+print remote_conn.send("show interface terse\n")
+
+dir(remote_conn_pre)
+'close',
+'connect',
+'exec_command',
+'get_host_keys',
+'invoke_shell',
+'load_host_keys',
+'load_system_host_keys',
+'open_sftp',
+'save_host_keys',
+'set_log_channel',
+'set_missing_host_key_policy'
+
+
+
+# How to output all data (e.g. - large configuration)
+
+MAX_BUFFER = 65535
+
+if remote_conn.recv_ready():
+    output += remote_conn.recv(MAX_BUFFER)
+
+##Pexpect#######################################################################################################
+
+#!/usr/bin/python2.7
+
+import pexpect
+import sys
+import time
+import re
+from getpass import getpass
+
+def main():	
+    IPADDR = '192.168.0.121'
+    USER = 'juniper'
+    #PASSWD = getpass()
+    PASSWD = 'juniper123'
+    PORT = 22
+
+    ssh_conn = pexpect.spawn('ssh -l {} {} -p {}'.format(username, ip_addr, port))
+    #ssh_conn.logfile = sys.stdout
+    ssh_conn.timout = 3
+    ssh_conn.expect('ssword:')
+    ssh_conn.sendline(password)
+    ssh_conn.expect('juniper@')
+    
+    router_name = ssh_conn.before
+    router_name = router_name.strip()
+	prompt = router_name + ssh_conn.after
+	prompt = prompt.strip()
+
+if __name__ == "__main__""
+    main()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
