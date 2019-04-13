@@ -22,8 +22,7 @@ import time
 IPADDR = '192.168.0.12'
 USER01 = 'tjones'
 #PASSWD = getpass.getpass('Password:')
-#PASSWD = raw_input('Password:') # not clear txt
-PASSWD = 'Iam!g0ing'
+PASSWD = raw_input('Password:') # not clear txt
 PORT = 22
 
 #Devices = Interface:mac_address
